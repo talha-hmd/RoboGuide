@@ -5,8 +5,6 @@ A **beginner HTML/CSS project** focused on practicing **CSS Grid layouts**, imag
 ## 📊 Preview
 <img width="1900" height="885" alt="RoboGuide" src="https://github.com/user-attachments/assets/9a8727ba-c38f-4285-9bd5-a13d1772ec2a" />
 
-<hr>
-
 ## 🧠 Project Goal
 
 This site was built to practice:
