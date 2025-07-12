@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoboGuide</title>
+    <link rel="stylesheet" href="homepage-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;600;700&family=Source+Code+Pro:wght@400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <img class="image-gradient" src="gradient.png" alt="gradient">
+    <div class="layer-blur"></div>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <header class="header">
+            <h1 class="logo">RoboGuide.</h1>
+
+            <nav>
+                <a href="#company">Company</a>
+                <a href="#features">Features</a>
+                <a href="#resources">Resources</a>
+                <a href="#docs">Docs</a>
+            </nav>
+            <a href="#about" class="about-btn">About Us</a>
+        </header>
+
+        <main>
+            <!-- Hero Content -->
+            <div class="content">
+                <h1>Guide To Robotics</h1>
+
+                <p class="description">
+                    Robotics is an interdisciplinary field that integrates computer science and engineering to design,
+                    build, and operate robots. The field has applications in manufacturing, healthcare, space
+                    exploration,
+                    and many other areas.
+                </p>
+
+                <div class="buttons">
+                    <div class="tag-box button-box">
+                        <a href="#featured" class="tag explore-btn">Explore More</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Spline Robot Viewer -->
+        <spline-viewer class="robot-3d"
+            url="https://prod.spline.design/yuGVtSJxV8aCqD4j/scene.splinecode"></spline-viewer>
+    </div>
+
+    <hr>
+
+    <!-- Temp Full Page Content (below hero, outside of .container) -->
+    <div class="page-sections">
+        <!-- 2. Featured Robot Banner -->
+        <section class="featured" id="featured">
+            <img src="images/mercury-x1.avif" alt="Mercury X1 robot">
+            <div class="info">
+                <span class="tag">Featured Robot</span>
+                <h2>Mercury X1</h2>
+                <p>A friendly wheeled humanoid.</p>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- 3. Latest Robots -->
+        <section class="latest">
+            <h2>Latest Robots</h2>
+            <div class="robots-list">
+                <div class="robot">
+                    <img src="images/dex-ee.jpg" alt="DEX-EE">
+                    <h3>DEX-EE</h3>
+                </div>
+                <div class="robot">
+                    <img src="images/optimus.jpg" alt="Optimus (Tesla Bot)">
+                    <h3>Optimus (Tesla Bot)</h3>
+                </div>
+                <div class="robot">
+                    <img src="images/farmonacci.jpg" alt="Farmonacci">
+                    <h3 class="large-picture">Farmonacci</h3>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- 4. Another Featured Robot Banner -->
+        <section class="featured">
+            <img src="images/jibo.jpg" alt="Jibo robot">
+            <div class="info">
+                <span class="tag yellow">Featured Robot</span>
+                <h2>Jibo</h2>
+                <p>One of the first social robots to be commercialized</p>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- 5. Educational Robots -->
+        <section class="category" id="educational">
+            <h2>Educational Robots</h2>
+            <div class="robots-list">
+                <div class="robot">
+                    <img src="images/mycobot.webp" alt="myCobot 280">
+                    <h3>myCobot 280</h3>
+                </div>
+                <div class="robot">
+                    <img src="images/viam-rover.jpg" class="viam" alt="Viam Rover 2.0">
+                    <h3>Viam Rover 2.0</h3>
+                </div>
+                <div class="robot cube">
+                    <img src="images/cubelets.webp" class="cubelets" alt="Cubelets">
+                    <h3>Cubelets</h3>
+                </div>
+                <div class="robot">
+                    <img src="images/darwin.webp" alt="Darwin-OP">
+                    <h3>Darwin-OP</h3>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- 6. Space Robots -->
+        <section class="category" id="space">
+            <h2>Space Robots</h2>
+            <div class="highlight">
+                <div class="robot big">
+                    <img src="images/valkyrie.webp" alt="Valkyrie">
+                    <h3>Valkyrie</h3>
+                </div>
+                <div class="robot small-list">
+                    <div><img src="images/robonaut.webp" alt="Robonaut 2">
+                        <h4>Robonaut 2</h4>
+                    </div>
+                    <div><img src="images/curiosity.png" alt="Curiosity">
+                        <h4>Curiosity</h4>
+                    </div>
+                    <div><img src="images/perseverance.webp" alt="Perseverance">
+                        <h4>Perseverance</h4>
+                    </div>
+                    <div><img src="images/spirit.png" alt="Spirit & Opportunity">
+                        <h4 class="spirit">Spirit & Opportunity</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- 7. Learn About Robotics -->
+        <section class="learn" id="learn">
+            <h2>Learn About Robotics</h2>
+            <div class="articles">
+                <div class="card">
+                    <h3>When Will Robots Do Our Chores?</h3>
+                    <p>Humanoid robots powered by AI may finally be able to do our housework</p>
+                </div>
+                <div class="card">
+                    <h3>What Is a Robot?</h3>
+                    <p>Top roboticists explain their definition of robot</p>
+                </div>
+                <div class="card">
+                    <h3>Types of Robots</h3>
+                    <p>Categories frequently used to classify robots</p>
+                </div>
+                <div class="card">
+                    <h3>How to Get Started in Robotics</h3>
+                    <p>Learn how you can start building robots and explore careers in robotics</p>
+                </div>
+            </div>
+        </section>
+
+
+        <hr>
+
+        <!-- 8. Random Robots -->
+        <section class="random">
+            <h2>Two Random Robots</h2>
+            <div class="robots-list">
+                <div class="robot">
+                    <img src="images/laikago.webp" alt="Laikago">
+                    <h3>Laikago</h3>
+                </div>
+                <div class="robot">
+                    <img src="images/hexa.jpg" alt="HEXA">
+                    <h3>HEXA</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. Footer Placeholder -->
+        <footer class="site-footer">
+            <div class="footer-top">
+                <nav class="footer-links">
+                    <a href="#">ABOUT</a>
+                    <a href="#">CONTACT & SUPPORT</a>
+                    <a href="#">ACCESSIBILITY</a>
+                    <a href="#">NONDISCRIMINATION</a>
+                    <a href="#">TERMS</a>
+                    <a href="#">PRIVACY</a>
+                </nav>
+                <div class="footer-copy">
+                    <p>
+                        © 2025 RobotsGuide.com — All rights reserved.
+                        A public clone site, RobotsGuide is inspired by real-world robotics databases and design
+                        explorations.
+                    </p>
+                </div>
+            </div>
+            <hr>
+            <div class="footer-bottom">
+                <p>
+                    Structured content created by <a href="#">Muhammad Talha.</a>
+                </p>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Spline Viewer -->
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.22/build/spline-viewer.js"></script>
+
+</body>
+
+</html>

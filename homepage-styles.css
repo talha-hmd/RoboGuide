@@ -1,0 +1,903 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: #e7e7e7;
+    min-height: 100vh;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+/* Animations */
+img {
+    transition: transform 1s ease-in-out;
+    transform: scale(1);
+}
+
+.featured:hover .info,
+.featured img:hover+.info {
+    background: #fff;
+    color: #111;
+    transition: background 0.3s, color 0.3s;
+}
+
+.robot:hover h3,
+.robot img:hover+h3 {
+    background: #fff;
+    color: #111;
+    transition: background 0.3s, color 0.3s;
+}
+
+.small-list>div:hover h4,
+.small-list img:hover+h4 {
+    background: #fff;
+    color: #111;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* On hover, slightly scale up */
+img:hover {
+    transform: scale(1.05);
+    /* feel free to adjust the scale */
+}
+
+.learn .articles .card {
+    transition: background 0.3s, color 0.3s;
+    background: #181818;
+    /* or your default card bg */
+    color: #e7e7e7;
+}
+
+.learn .articles .card:hover h3,
+.learn .articles .card:hover p {
+    color: #111;
+}
+
+.learn .articles .card:hover {
+
+    background: #fff;
+    color: #111;
+    cursor: pointer;
+}
+
+/* Font Selections */
+body,
+p,
+.description,
+.explore-btn,
+.about-btn,
+nav a,
+.content h1,
+.featured h2,
+.robots-list h3 {
+    font-family: "poppins", sans-serif;
+}
+
+.robot h3,
+.rankings li,
+.tag,
+.robot .tag {
+    font-family: "Source code Pro", monospace;
+
+}
+
+.learn h3,
+.articles div,
+.quote,
+.article-text,
+.rankings p,
+.educational p {
+    font-family: "Libre Baskerville", serif;
+}
+
+
+/* Gradient & Layer Effect */
+
+.image-gradient {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.layer-blur {
+    height: 0;
+    width: 30rem;
+    position: absolute;
+    top: 20%;
+    right: 0;
+    box-shadow: 0 0 700px 8px white;
+    rotate: -30deg;
+    z-index: -1;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Header */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: relative;
+    z-index: 999;
+}
+
+.header h1.logo {
+    margin-left: 0;
+    /* remove negative margin */
+    z-index: 2;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+.header nav {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    z-index: 1;
+}
+
+nav a {
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    transition: color 0.2s ease-in-out;
+    text-decoration: none;
+    color: inherit;
+}
+
+nav a:hover {
+    color: #a7a7a7;
+}
+
+/* Main Content (Hero Seciton) */
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: calc(90vh - 6rem);
+}
+
+.content {
+    max-width: 40rem;
+    margin-left: 5%;
+    z-index: 999;
+}
+
+.tag-box {
+    position: relative;
+    width: 18rem;
+    height: 2.5rem;
+    border-radius: 50px;
+    background: linear-gradient(to right, #656565, #7f42a7, #6600c5, #5300a0, #757575, #656565);
+    background-size: 200%;
+    animation: gradient-animation 2.5s linear infinite;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.tag-box .tag {
+    position: absolute;
+    inset: 3px 3px 3px 3px;
+    background-color: black;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s ease;
+}
+
+.tag-box .tag:hover {
+    color: #5300a0
+}
+
+.content h1 {
+    font-size: 4rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    margin: 2rem 0;
+    line-height: 1.2;
+    text-shadow: 0 0 10px rgba(128, 128, 128, 0.418);
+}
+
+.description {
+    font-size: 1.2rem;
+    letter-spacing: 0.05em;
+    max-width: 35rem;
+    color: grey;
+}
+
+.button-box {
+    margin: 4.5rem 0 0 0;
+    width: 100%;
+    max-width: 35rem;
+    /* adjust as needed */
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.explore-btn {
+    width: 100%;
+    height: 100%;
+    background: black;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #e7e7e7;
+    font-size: 1.15rem;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    transition: color 0.3s, background 0.3s;
+    border: none;
+    cursor: pointer;
+    box-shadow: none;
+}
+
+.explore-btn:hover {
+    letter-spacing: 0.1em;
+}
+
+.about-btn {
+    position: absolute;
+    top: 1.5rem;
+    right: 3.5rem;
+    padding: 0.5rem 1.5rem;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    background: transparent;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+    z-index: 1000;
+}
+
+.about-btn:hover {
+    background: #fff;
+    color: #222;
+}
+
+.robot-3d {
+    position: absolute;
+    top: 0;
+    right: -25%;
+}
+
+@keyframes gradient-animation {
+    to {
+        background-position: 200%;
+    }
+}
+
+/* Content Below Hero Section */
+hr {
+    grid-column: 1 / 7;
+}
+
+.featured img,
+.highlight .robot img,
+.robots-list img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.page-sections img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Ensure section content doesn't exceed its grid cell */
+.page-sections>section,
+.page-sections>footer {
+    grid-column: 1 / -1;
+    /* span all 6 columns unless overridden */
+    width: 100%;
+}
+
+.page-sections {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1.5rem;
+    width: 100%;
+    padding: 2rem 1rem;
+    max-width: 98%;
+    margin: 0 auto;
+}
+
+/* Featyred Robots Section */
+section {
+    position: relative;
+}
+
+.featured {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.featured img {
+    max-height: 80vh;
+    object-position: center center;
+}
+
+.featured .info {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    z-index: 2;
+    color: white;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.5);
+    /* optional: soft dark bg */
+    border-radius: 8px;
+    max-width: 90%;
+    backdrop-filter: blur(1px);
+}
+
+.latest {
+    grid-column: span 6;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.latest .robots-list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, auto);
+    /* 2 rows: one for each left robot */
+    gap: 1rem;
+}
+
+.latest .robot {
+    position: relative;
+    /* make overlay positioning work */
+    background-color: #181818;
+    padding: 0;
+    /* no padding around image now */
+    border-radius: 8px;
+    overflow: hidden;
+    max-height: 90vh;
+}
+
+
+/* DEX-EE (top-left) */
+.latest .robot:nth-child(1) {
+    grid-column: span 2;
+    grid-row: 1;
+}
+
+/* OPTIMUS (bottom-left) */
+.latest .robot:nth-child(2) {
+    grid-column: span 2;
+    grid-row: 2;
+}
+
+/* FARMONACCI (right side, spans both rows) */
+.latest .robot:nth-child(3) {
+    position: relative;
+    grid-column: 3 / span 4;
+    /* starts at column 3, spans till column 6 */
+    grid-row: 1 / span 2;
+}
+
+.robot h3 {
+    font-size: 1rem;
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    z-index: 2;
+    color: white;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.5);
+    /* optional: soft dark bg */
+    border-radius: 8px;
+    max-width: 90%;
+    backdrop-filter: blur(1px);
+}
+
+/* Educational Robots Section */
+.category .robots-list {
+    display: inline-grid;
+    grid-template-columns: repeat(2, auto);
+    /* auto so items take image size */
+    gap: 1rem;
+}
+
+/* Each robot takes 3 columns, so 2 per row */
+.category .robot {
+    height: 100%;
+    /* allow parent grid control */
+    display: flex;
+    align-items: center;
+    /* pushes content to bottom */
+    justify-content: center;
+    /* optional: centers image horizontally */
+    padding: 0;
+    background: none;
+    border-radius: 0;
+    position: relative;
+}
+
+.category .robot img {
+    display: block;
+    width: 98%;
+    height: auto;
+    max-width: 100%;
+    border-radius: 8px;
+    align-items: bottom;
+}
+
+.category .robot h3 {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-family: monospace;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+}
+
+img.viam {
+    align-self: flex-end;
+}
+
+/* Align Cubelets image to the top of its container */
+img.cubelets {
+    align-self: flex-start;
+}
+
+.robot.cube h3 {
+    bottom: 34%;
+    /* Move up as needed, increase % for higher position */
+}
+
+/* Highlight Section */
+/* Container for the highlight section */
+.category .highlight {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    /* 6-column grid */
+    gap: 1rem;
+    align-items: stretch;
+    /* ensures vertical alignment */
+}
+
+/* Big robot takes 4 columns */
+.robot.big {
+    grid-column: span 4;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.robot.big img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Text on big image */
+.robot.big h3 {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-family: monospace;
+}
+
+/* Small list column takes 2 columns */
+.small-list {
+    grid-column: span 2;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+img[alt="Robonaut 2"] {
+    align-self: left;
+}
+
+/* Each small robot item */
+.small-list>div {
+    flex: 1;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.small-list img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Titles over small robot images */
+.small-list h4 {
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0.5rem;
+    margin: 0;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 0.3rem 0.7rem;
+    border-radius: 6px;
+    font-family: monospace;
+    font-size: 1rem;
+}
+
+/* Learn Section */
+.learn {
+    margin-top: 0.5%;
+    padding: 1rem;
+}
+
+.learn h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #fff;
+    font-family: sans-serif;
+}
+
+.articles {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.card {
+    flex: 1 1 calc(25% - 1rem);
+    width: 100%;
+    min-width: 200px;
+    height: auto;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.5),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.1),
+        inset 0 0 40px 20px rgba(255, 255, 255, 0.02);
+    position: relative;
+    overflow: hidden;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+    font-family: monospace;
+    transition: transform 0.5s ease-in-out;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.8),
+            transparent);
+}
+
+.card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(180deg,
+            rgba(255, 255, 255, 0.8),
+            transparent,
+            rgba(255, 255, 255, 0.3));
+}
+
+/* Optional hover effect */
+.card:hover {
+    transform: translateY(-5px);
+}
+
+
+.card h3 {
+    font-size: 1.4rem;
+    color: #e0e0e0;
+    font-weight: 600;
+    font-family: sans-serif;
+    margin-bottom: 1rem;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #b0b0b0;
+    font-family: sans-serif;
+    line-height: 1.5;
+}
+
+/* Random Robots Section */
+.random .robots-list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    /* 6-column layout */
+    gap: 1.5rem;
+}
+
+/* Individual robot card */
+.random .robot {
+    grid-column: span 3;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #121212;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: fit-content;
+
+}
+
+/* Image style */
+.random .robot img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+/* Robot name text over image */
+.random .robot h3 {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    margin: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 1.2rem;
+    z-index: 1;
+}
+
+/* footer */
+.site-footer {
+    background-color: #1c1c1c;
+    /* lighter than full black */
+    color: #e0e0e0;
+    /* light grey text */
+    font-family: monospace;
+    font-size: 0.9rem;
+    padding: 3rem 3rem 2rem;
+    /* increased top padding */
+    border-top: 1px solid #333;
+}
+
+.footer-top {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    /* space above horizontal line */
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-self: center;
+}
+
+.footer-links a {
+    color: #d0d0d0;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    font-size: 0.85rem;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.footer-copy p {
+    margin: 0;
+    max-width: 1200px;
+    line-height: 1.5;
+    color: #ccc;
+    text-align: center;
+}
+
+/* Border line styling */
+.footer-bottom {
+    border-top: 1px solid #aaa;
+    padding-top: 1.5rem;
+    /* adds spacing below the line */
+    text-align: center;
+    color: #bbb;
+}
+
+.footer-bottom a {
+    color: #c5aaff;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.2s;
+}
+
+.footer-bottom a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background: #c5aaff;
+    transition: width 0.3s cubic-bezier(.4, 0, .2, 1);
+}
+
+.footer-bottom a:hover::after {
+    width: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 1216px) {
+    .robot-3d {
+        display: none;
+    }
+
+    .content {
+        max-width: 90%;
+        margin: 0 auto;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem 2rem;
+        position: relative;
+        z-index: 999;
+    }
+
+    .header h1.logo {
+        font-size: 3rem;
+        font-weight: 300;
+        margin: 0;
+    }
+
+    /* Nav centered under logo */
+    .header nav {
+        position: static;
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    /* Keep About Us on the right */
+    .about-btn {
+        position: absolute;
+        top: 1rem;
+        right: 2rem;
+    }
+}
+
+@media screen and (max-width: 986px) {
+    .robots-list .robot h3 {
+        padding: 0.4rem 0.8rem;
+        /* transform: scale(0.55); */
+    }
+}
+
+@media screen and (max-width: 897px) {
+    .footer-links {
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 861px) {
+    .robots-list .robot h3 {
+        padding: 0.2rem 0.4rem;
+        /* transform: scale(0.55); */
+    }
+}
+
+@media screen and (max-width: 654px) {
+    .about-btn {
+        position: static;
+        display: block;
+        width: 100%;
+        margin: 1rem 0 0 0;
+        text-align: center;
+        border-radius: 30px;
+        box-sizing: border-box;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .latest .robots-list .robot h3 {
+        padding: 0;
+        white-space: nowrap;
+        font-size: 0.85rem;
+        color: white !important;
+        background: none;
+        transition: none;
+    }
+
+    .latest .robots-list .robot .large-picture {
+        color: black !important;
+        background: none;
+        transition: none;
+    }
+
+    .latest .robots-list .robot h3:hover {
+        color: inherit !important;
+        background: none !important;
+        cursor: default;
+        transition: none;
+    }
+
+    .category .spirit
+    {
+        font-size: 0.91rem;
+    }
+}
+
